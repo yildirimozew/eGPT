@@ -1,6 +1,10 @@
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.ollama import Ollama
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+tokenizer = AutoTokenizer.from_pretrained("umarigan/LLama-3-8B-Instruction-tr")
+llm = AutoModelForCausalLM.from_pretrained("umarigan/LLama-3-8B-Instruction-tr")
 
 documents = SimpleDirectoryReader("data").load_data()
 
@@ -8,7 +12,7 @@ documents = SimpleDirectoryReader("data").load_data()
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
 
 # ollama
-llm = Ollama(model="llama3.2", request_timeout=360.0)
+#llm = Ollama(model="llama3.2", request_timeout=360.0)
 
 index = VectorStoreIndex.from_documents(
     documents,

@@ -1,1 +1,109 @@
-ayşe 25 yaşındadır. 
+...
+ARA
+select
+
+
+BAKANLIĞIMIZ
+KÜLTÜR
+SANAT
+TURİZM
+DUYURULAR
+UYGULAMALAR
+İLETİŞİM
+Engelsiz Site
+
+
+
+Atatürk'ün Hayatı
+Mustafa Kemal Atatürk (1881-1938)
+
+TÜRKİYE CUMHURİYETİ'NİN KURUCUSU VE İLK CUMHURBAŞKANI ATATÜRK
+
+Mustafa Kemal Atatürk 1881 yılında Selânik'te Kocakasım Mahallesi, Islâhhâne Caddesi'ndeki üç katlı pembe evde doğdu. Babası Ali Rıza Efendi, annesi Zübeyde Hanım'dır. Baba tarafından dedesi Hafız Ahmet Efendi XIV-XV. yüzyıllarda Konya ve Aydın'dan Makedonya'ya yerleştirilmiş Kocacık Yörüklerindendir. Annesi Zübeyde Hanım ise  Selânik yakınlarındaki Langaza kasabasına yerleşmiş eski bir Türk ailesinin kızıdır. Milis subaylığı, evkaf katipliği ve kereste ticareti yapan Ali Rıza Efendi, 1871 yılında Zübeyde Hanım'la evlendi. Atatürk'ün beş kardeşinden dördü küçük yaşlarda öldü, sadece Makbule (Atadan) 1956 yılına değin yaşadı.
+
+Küçük Mustafa öğrenim çağına gelince Hafız Mehmet Efendi'nin mahalle mektebinde öğrenime başladı, sonra babasının isteğiyle Şemsi Efendi Mektebi'ne geçti. Bu sırada babasını kaybetti (1888). Bir süre Rapla Çiftliği'nde dayısının yanında kaldıktan sonra Selânik'e dönüp okulunu bitirdi. Selânik Mülkiye Rüştiyesi'ne kaydoldu. Kısa bir süre sonra 1893 yılında Askeri Rüştiye'ye girdi. Bu okulda Matematik öğretmeni Mustafa Bey adına "Kemal" i ilave etti. 1896-1899 yıllarında Manastır Askeri İdâdi'sini bitirip, İstanbul'da Harp Okulunda öğrenime başladı. 1902 yılında teğmen rütbesiyle mezun oldu., Harp Akademisi'ne devam etti. 11 Ocak 1905'te yüzbaşı rütbesiyle Akademi'yi tamamladı. 1905-1907 yılları arasında Şam'da 5. Ordu emrinde görev yaptı. 1907'de Kolağası (Kıdemli Yüzbaşı) oldu. Manastır'a III. Ordu'ya atandı. 19 Nisan 1909'da İstanbul'a giren Hareket Ordusu'nda Kurmay Başkanı olarak görev aldı. 1910 yılında Fransa'ya gönderildi. Picardie Manevraları'na katıldı. 1911 yılında İstanbul'da Genel Kurmay Başkanlığı emrinde çalışmaya başladı.
+
+1911 yılında İtalyanların Trablusgarp'a hücumu ile başlayan savaşta, Mustafa Kemal bir grup arkadaşıyla birlikte Tobruk ve Derne bölgesinde görev aldı. 22 Aralık 1911'de İtalyanlara karşı Tobruk Savaşını kazandı. 6 Mart 1912'de Derne Komutanlığına getirildi.
+
+Ekim 1912'de Balkan Savaşı başlayınca Mustafa Kemal Gelibolu ve Bolayır'daki birliklerle savaşa katıldı. Dimetoka ve Edirne'nin geri alınışında büyük hizmetleri görüldü. 1913 yılında Sofya Ateşemiliterliğine atandı. Bu görevde iken 1914 yılında yarbaylığa yükseldi. Ateşemiliterlik görevi Ocak 1915'te sona erdi. Bu sırada I. Dünya Savaşı başlamış, Osmanlı İmparatorluğu savaşa girmek zorunda kalmıştı. Mustafa Kemal 19. Tümeni kurmak üzere Tekirdağ'da görevlendirildi.
+
+1914 yılında başlayan I. Dünya Savaşı'nda, Mustafa Kemal Çanakkale'de bir kahramanlık destanı yazıp İtilaf Devletlerine "Çanakkale geçilmez! " dedirtti. 18 Mart 1915'te Çanakkale Boğazını geçmeye kalkan İngiliz ve Fransız donanması ağır kayıplar verince Gelibolu Yarımadası'na asker çıkarmaya karar verdiler. 25 Nisan 1915'te Arıburnu'na çıkan düşman kuvvetlerini, Mustafa Kemal'in komuta ettiği 19. Tümen Conkbayırı'nda durdurdu. Mustafa Kemal, bu başarı üzerine albaylığa yükseldi. İngilizler 6-7 Ağustos 1915'te Arıburnu'nda tekrar taarruza geçti. Anafartalar Grubu Komutanı Mustafa Kemal 9-10 Ağustos'ta Anafartalar Zaferini kazandı. Bu zaferi 17 Ağustos'ta Kireçtepe, 21 Ağustos'ta II. Anafartalar zaferleri takip etti. Çanakkale Savaşlarında yaklaşık 253.000 şehit veren Türk ulusu onurunu İtilaf Devletlerine karşı korumasını bilmiştir. Mustafa Kemal'in askerlerine "Ben size taarruzu emretmiyorum, ölmeyi emrediyorum!" emri cephenin kaderini değiştirmiştir.
+
+Mustafa Kemal Çanakkale Savaşları'dan sonra 1916'da Edirne ve Diyarbakır'da görev aldı. 1 Nisan 1916'da tümgeneralliğe yükseldi. Rus kuvvetleriyle savaşarak Muş ve Bitlis'in geri alınmasını sağladı. Şam ve Halep'teki kısa süreli görevlerinden sonra 1917'de İstanbul'a geldi. Velihat Vahidettin Efendi'yle Almanya'ya giderek cephede incelemelerde bulundu. Bu seyehatten sonra hastalandı. Viyana ve Karisbad'a giderek tedavi oldu. 15 Ağustos 1918'de Halep'e 7. Ordu Komutanı olarak döndü. Bu cephede İngiliz kuvvetlerine karşı başarılı savunma savaşları yaptı. Mondros Mütarekesi'nin imzalanmasından bir gün sonra, 31 Ekim 1918'de Yıldırım Orduları Grubu Komutanlığına getirildi. Bu ordunun kaldırılması üzerine 13 Kasım 1918'de İstanbul'a gelip Harbiye Nezâreti'nde (Bakanlığında) göreve başladı.
+
+Mondros Mütarekesi'nden sonra İtilaf Devletleri'nin Osmanlı topraklarını işgale başlamaları üzerine; Mustafa Kemal 9. Ordu Müfettişi olarak 19 Mayıs 1919'da Samsun'a çıktı. 22 Haziran 1919'da Amasya'da yayımladığı genelgeyle "Milletin istiklâlini yine milletin azim ve kararının kurtaracağını " ilan edip Sivas Kongresi'ni toplantıya çağırdı. 23 Temmuz - 7 Ağustos 1919 tarihleri arasında Erzurum, 4 - 11 Eylül 1919 tarihleri arasında da Sivas Kongresi'ni toplayarak vatanın kurtuluşu için izlenecek yolun belirlenmesini sağladı. 27 Aralık 1919'da Ankara'da heyecanla karşılandı. 23 Nisan 1920'de Türkiye Büyük Millet Meclisi'nin açılmasıyla Türkiye Cumhuriyeti'nin kurulması yolunda önemli bir adım atılmış oldu. Meclis ve Hükümet Başkanlığına Mustafa Kemal seçildi Türkiye Büyük Millet Meclisi, Kurtuluş Savaşı'nın başarıyla sonuçlanması için gerekli yasaları kabul edip uygulamaya başladı.
+
+Türk Kurtuluş Savaşı 15 Mayıs 1919'da Yunanlıların İzmir'I işgali sırasında düşmana ilk kurşunun atılmasıyla başladı. 10 Ağustos 1920 tarihinde Sevr Antlaşması'nı imzalayarak aralarında Osmanlı İmparatorluğu'nu paylaşan I. Dünya Savaşı'nın galip devletlerine karşı önce Kuvâ-yi Milliye adı verilen milis kuvvetleriyle savaşıldı. Türkiye Büyük Millet Meclisi düzenli orduyu kurdu, Kuvâ-yi Milliye - ordu bütünleşmesini sağlayarak savaşı zaferle sonuçlandırdı.
+
+Mustafa Kemal yönetimindeki Türk Kurtuluş Savaşının önemli aşamaları şunlardır:
+
+Sarıkamış (20 Eylül 1920), Kars (30 Ekim 1920) ve Gümrü'nün (7 Kasım 1920) kurtarılışı.
+
+Çukurova, Gazi Antep, Kahraman Maraş Şanlı Urfa savunmaları (1919- 1921)
+
+I. İnönü Zaferi (6 -10 Ocak 1921)
+
+II. İnönü Zaferi (23 Mart-1 Nisan 1921)
+
+Sakarya Zaferi (23 Ağustos-13 Eylül 1921)
+
+Büyük Taarruz, Başkomutan Meydan Muhaberesi ve Büyük Zafer (26 Ağustos 9 Eylül 1922)
+
+Sakarya Zaferinden sonra 19 Eylül 1921'de Türkiye Büyük Millet Meclisi Mustafa Kemal'e Mareşal rütbesi ve Gazi unvanını verdi. Kurtuluş Savaşı, 24 Temmuz 1923'te imzalanan Lozan Antlaşması'yla sonuçlandı. Böylece Sevr Antlaşması'yla paramparça edilen, Türklere 5-6 il büyüklüğünde vatan bırakılan Türkiye toprakları üzerinde ulusal birliğe dayalı yeni Türk devletinin kurulması için hiçbir engel kalmadı.
+
+23 Nisan 1920'de Ankara'da TBMM'nin açılmasıyla Türkiye Cumhuriyeti'nin kuruluşu müjdelenmiştir. Meclisin Türk Kurtuluş Savaşı'nı başarıyla yönetmesi, yeni Türk devletinin kuruluşunu hızlandırdı. 1 Kasım 1922'de hilâfet ve saltanat birbirinden ayrıldı, saltanat kaldırıldı. Böylece Osmanlı İmparatorluğu'yla yönetim bağları koparıldı. 13 Ekim 1923'te Cumhuriyet idaresi kabul edildi, Atatürk oybirliğiyle ilk cumhurbaşkanı seçildi. 30 Ekim 1923 günü İsmet İnönü tarafından Cumhuriyet'in ilk hükümeti kuruldu. Türkiye Cumhuriyeti, "Egemenlik kayıtsız şartsız milletindir" ve "Yurtta barış cihanda barış" temelleri üzerinde yükselmeye başladı.
+
+Atatürk Türkiye'yi "Çağdaş uygarlık düzeyine çıkarmak" amacıyla bir dizi devrim yaptı. Bu devrimleri beş başlık altında toplayabiliriz:
+
+1. Siyasal Devrimler:
+· Saltanatın Kaldırılması (1 Kasım 1922)
+· Cumhuriyetin İlanı (29 Ekim 1923)
+· Halifeliğin Kaldırılması (3 Mart 1924)
+
+2. Toplumsal Devrimler:
+· Kadınlara erkeklerle eşit haklar verilmesi (1926-1934)
+· Şapka ve kıyafet devrimi (25 Kasım 1925)
+· Tekke zâviye ve türbelerin kapatılması (30 Kasım 1925)
+· Soyadı kanunu ( 21 Haziran 1934)
+· Lâkap ve unvanların kaldırılması (26 Kasım 1934)
+· Uluslararası saat, takvim ve uzunluk ölçülerin kabulü (1925-1931)
+
+3. Hukuk Devrimi:
+· Mecellenin kaldırılması (1924-1937)
+· Türk Medeni Kanunu ve diğer kanunların çıkarılarak laik hukuk düzenine geçilmesi (1924-1937)
+
+4. Eğitim ve Kültür Alanındaki Devrimler:
+· Öğretimin birleştirilmesi (3 Mart 1924)
+· Yeni Türk harflerinin kabulü (1 Kasım 1928)
+· Türk Dil ve Tarih Kurumlarının kurulması (1931-1932)
+· Üniversite öğreniminin düzenlenmesi (31 Mayıs 1933)
+· Güzel sanatlarda yenilikler
+
+5. Ekonomi Alanında Devrimler:
+· Aşârın kaldırılması
+· Çiftçinin özendirilmesi
+· Örnek çiftliklerin kurulması
+· Sanayiyi Teşvik Kanunu'nun çıkarılarak sanayi kuruluşlarının kurulması
+· I. ve II. Kalkınma Planları'nın (1933-1937) uygulamaya konulması, yurdun yeni yollarla donatılması
+
+Soyadı Kanunu gereğince, 24 Kasım 1934'de TBMM'nce Mustafa Kemal'e "Atatürk" soyadı verildi.
+
+Atatürk, 24 Nisan 1920 ve 13 Ağustos 1923 tarihlerinde TBMM Başkanlığına seçildi. Bu başkanlık görevi, Devlet-Hükümet Başkanlığı düzeyindeydi. 29 Ekim 1923 yılında Cumhuriyet ilan edildi ve Atatürk ilk cumhurbaşkanı seçildi. Anayasa gereğince dört yılda bir cumhurbaşkanlığı seçimleri yenilendi. 1927,1931, 1935 yıllarında TBMM Atatürk'ü yeniden cumhurbaşkanlığına seçti.
+
+Atatürk sık sık yurt gezilerine çıkarak devlet çalışmalarını yerinde denetledi. İlgililere aksayan yönlerle ilgili emirler verdi. Cumhurbaşkanı sıfatıyla Türkiye'yi ziyaret eden yabancı ülke devlet başkanlarını, başbakanlarını, bakanlarını komutanlarını ağırladı.
+
+15-20 Ekim 1927 tarihinde Kurtuluş Savaşı'nı ve Cumhuriyet'in kuruluşunu anlatan büyük nutkunu, 29 Ekim 1933 tarihinde de 10. Yıl Nutku'nu okudu.
+
+Atatürk özel yaşamında sadelik içinde yaşadı. 29 Ocak 1923'de Latife Hanımla evlendi. Birçok yurt gezisine birlikte çıktılar. Bu evlilik 5 Ağustos 1925 tarihine dek sürdü. Çocukları çok seven Atatürk Afet (İnan), Sabiha (Gökçen), Fikriye, Ülkü, Nebile, Rukiye, Zehra adlı kızları ve Mustafa adlı çobanı manevi evlat edindi. Abdurrahim ve İhsan adlı çocukları himayesine aldı. Yaşayanlarına iyi bir gelecek hazırladı.
+
+1937 yılında çiftliklerini hazineye, bir kısım taşınmazlarını da Ankara ve Bursa Belediyelerine bağışladı. Mirasından kızkardeşine, manevi evlatlarına, Türk Dil ve Tarih Kurumlarına pay ayırdı. Kitap okumayı, müzik dinlemeyi, dans etmeyi, ata binmeyi ve yüzmeyi çok severdi. Zeybek oyunlarına, güreşe, Rumeli türkülerine aşırı ilgisi vardı. Tavla ve bilardo oynamaktan büyük keyif alırdı. Sakarya adlı atıyla, köpeği Fox'a çok değer verirdi. Zengin bir kitaplık oluşturmuştu. Akşam yemeklerine devlet ve bilim adamlarını, sanatçıları davet eder, ülkenin sorunlarını tartışırdı. Temiz ve düzenli giyinmeye özen gösterirdi. Doğayı çok severdi. Sık sık Atatürk Orman Çiftliği'ne gider, çalışmalara bizzat katılırdı.
+
+Fransızca ve Almanca biliyordu. 10 Kasım 1938 saat 9.05'te yakalandığı siroz hastalığından kurtulamayarak İstanbul'da Dolmabahçe Sarayı'nda hayata gözlerini yumdu. Cenazesi 21 Kasım 1938 günü törenle geçici istirahatgâhı olan Ankara Etnografya Müzesi'nde toprağa verildi. Anıtkabir yapıldıktan sonra nâşı görkemli bir törenle 10 Kasım 1953 günü ebedi istirahatgâhına gömüldü.
+
+ 
+
+İsmet İnönü Bulvarı No:32
+06100 Emek/Ankara
++90 (312) 4708000
+Alo 176 İletişim Merkezi
+Seyahat Acentası AramaKamu Hizmet StandartlarıEtik KomisyonuDilek ve ŞikayetlerinizSite Kullanım Koşulları (Yasal Uyarı)SSSWebmailKVKK Aydınlatma MetniBilgi Güvenliği PolitikasıSite AğacıIntranet
