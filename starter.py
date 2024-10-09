@@ -8,12 +8,16 @@ documents = SimpleDirectoryReader("data").load_data()
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
 
 # ollama
-Settings.llm = Ollama(model="llama3.2", request_timeout=360.0)
+llm = Ollama(model="llama3.2", request_timeout=360.0)
 
 index = VectorStoreIndex.from_documents(
     documents,
 )
 
-query_engine = index.as_query_engine()
-response = query_engine.query("What did the author do growing up?")
-print(response)
+chat_engine = index.as_chat_engine(chat_mode="react", llm=llm, verbose=True)
+while(True):
+    prompt = input("Enter your prompt: ")
+    if(prompt == "exit"):
+        break
+    response = chat_engine.chat(prompt)
+    print(response)
