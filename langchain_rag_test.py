@@ -49,51 +49,6 @@ vectorstore = Chroma.from_documents(documents=all_splits, embedding=local_embedd
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
-#summarization chain
-"""prompt = ChatPromptTemplate.from_template(
-    "Summarize the main themes in these retrieved docs: {docs}"
-)
-
-
-chain = {"docs": format_docs} | prompt | model | StrOutputParser()
-
-question = "How many masters programs does METU offer?"
-
-docs = vectorstore.similarity_search(question)
-
-print(chain.invoke(docs))"""
-
-#q&a chain
-
-RAG_TEMPLATE = """
-You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.
-
-<context>
-{context}
-</context>
-
-Answer the following question:
-
-{question}"""
-
-"""
-rag_prompt = ChatPromptTemplate.from_template(RAG_TEMPLATE)
-
-chain = (
-    RunnablePassthrough.assign(context=lambda input: format_docs(input["context"]))
-    | rag_prompt
-    | model
-    | StrOutputParser()
-)
-
-question = "How many phd programs does METU offer?"
-
-docs = vectorstore.similarity_search(question)
-
-# Run
-print(chain.invoke({"context": docs, "question": question}))
-"""
-
 #chat chain with history
 
 retriever = vectorstore.as_retriever()
