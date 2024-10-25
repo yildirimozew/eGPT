@@ -16,15 +16,15 @@ from langchain_core.messages import AIMessage, HumanMessage
 from langchain_community.document_loaders import PyPDFLoader
 
 model = ChatOllama(
-    model="llama3.2:latest",
+    model="llama3.1:latest",
 )
 
 #this loads ceng491 syllabus, however it cannot parse tables yet, so only ask questions about the text
-loader = PyPDFLoader("./data/syllabus.pdf")
+"""loader = PyPDFLoader("./data/syllabus.pdf")
 pages = []
 for page in loader.lazy_load():
     pages.append(page)
-data = pages
+data = pages"""
 
 #this loads subtitles from a statistics video
 """loader = YoutubeLoader.from_youtube_url(
@@ -33,8 +33,8 @@ data = pages
 data = loader.load()"""
 
 #this loads a text file
-"""loader = TextLoader("./data/metu.txt")
-data = loader.load()"""
+loader = TextLoader("./data/metu.txt")
+data = loader.load()
 
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
@@ -106,28 +106,58 @@ question_answer_chain = create_stuff_documents_chain(model, qa_prompt)
 rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chain)
 
 chat_history = []
-
-question = "What is the name of the lake in ODTÜ forest?"
-ai_msg_1 = rag_chain.invoke({"input": question, "chat_history": chat_history})
+full_msg = []
+"""
+question = "What is the name of the university?"
+ai_msg_1 = rag_chain.stream({"input": question, "chat_history": chat_history})
+for chunk in ai_msg_1:
+    if(chunk.get("answer") != None):
+        chunk = chunk.get("answer")
+        print(chunk, end="", flush=True)
+        full_msg.append(chunk)
+full_msg_string = "".join(full_msg)
 chat_history.extend(
     [
         HumanMessage(content=question),
-        AIMessage(content=ai_msg_1["answer"]),
+        AIMessage(content=full_msg_string),
     ]
 )
 
 second_question = "How big is it?"
-ai_msg_2 = rag_chain.invoke({"input": second_question, "chat_history": chat_history})
+ai_msg_2 = rag_chain.stream({"input": second_question, "chat_history": chat_history})
+for chunk in ai_msg_2:
+    if(chunk.get("answer") != None):
+        chunk = chunk.get("answer")
+        print(chunk, end="", flush=True)
+        full_msg.append(chunk)
+print("\n")
+full_msg_string = "".join(full_msg)
+chat_history.extend(
+    [
+        HumanMessage(content=second_question),
+        AIMessage(content=full_msg_string),
+    ]
+)
+"""
 
-print(ai_msg_2["answer"])
 
 while(True):
     user_input = input("User: ")
     #hard to implement streaming on chains 
-    ai_msg = rag_chain.invoke({"input": user_input, "chat_history": chat_history})
-    print(ai_msg["answer"])
-    chat_history.append(HumanMessage(content=user_input))
-    chat_history.append(AIMessage(content=ai_msg["answer"]))
+    ai_msg = rag_chain.stream({"input": user_input, "chat_history": chat_history})
+    for chunk in ai_msg:
+        if(chunk.get("answer") != None):
+            chunk = chunk.get("answer")
+            print(chunk, end="", flush=True)
+            full_msg.append(chunk)
+    print("\n")
+    full_msg_string = "".join(full_msg)
+    chat_history.extend(
+        [
+            HumanMessage(content=user_input),
+            AIMessage(content=full_msg_string),
+        ]
+    )
 
     if "exit" == user_input:
         break

@@ -20,11 +20,11 @@ model = ChatOllama(
 )
 
 #this loads ceng491 syllabus, however it cannot parse tables yet, so only ask questions about the text
-loader = PyPDFLoader("./data/syllabus.pdf")
+"""loader = PyPDFLoader("./data/syllabus.pdf")
 pages = []
 for page in loader.lazy_load():
     pages.append(page)
-data = pages
+data = pages"""
 
 #this loads subtitles from a statistics video
 """loader = YoutubeLoader.from_youtube_url(
@@ -33,8 +33,8 @@ data = pages
 data = loader.load()"""
 
 #this loads a text file
-"""loader = TextLoader("./data/metu.txt")
-data = loader.load()"""
+loader = TextLoader("./data/metu.txt")
+data = loader.load()
 
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
