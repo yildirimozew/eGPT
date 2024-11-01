@@ -20,7 +20,7 @@ model = ChatOllama(
 )
 
 #this loads ceng491 syllabus, however it cannot parse tables yet, so only ask questions about the text
-"""loader = PyPDFLoader("./data/syllabus.pdf")
+"""loader = PyPDFLoader("./data/2024_2025_Fall_CENG499_HW1.pdf")
 pages = []
 for page in loader.lazy_load():
     pages.append(page)
@@ -143,7 +143,6 @@ chat_history.extend(
 
 while(True):
     user_input = input("User: ")
-    #hard to implement streaming on chains 
     ai_msg = rag_chain.stream({"input": user_input, "chat_history": chat_history})
     for chunk in ai_msg:
         if(chunk.get("answer") != None):
