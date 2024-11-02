@@ -18,7 +18,6 @@ engine = create_engine("sqlite:///text_to_sql.db")
 db = SQLDatabase(engine=engine)
 
 #print("Usable table names: ", db.get_usable_table_names())
-#print(db.run("SELECT * FROM text_to_sql WHERE invoice_id = 1685022319400;"))
 
 llm = ChatOllama(
     model="llama3.2",
@@ -26,9 +25,7 @@ llm = ChatOllama(
 )
 
 execute_query = QuerySQLDataBaseTool(db=db)
-write_query = create_sql_query_chain(llm, db) #bunda bir sıkıntı var
-test_response = write_query.invoke({"question": "How many invoices are there in the database"})
-print(test_response)
+write_query = create_sql_query_chain(llm, db) 
 chain = write_query | execute_query
 
 
@@ -45,22 +42,27 @@ def print_and_return(string):
     print(string)
     return string
 
-answer = answer_prompt| print_and_return | llm | StrOutputParser()
+answer = answer_prompt | llm | StrOutputParser()
 
 def split_query(query):
     query_query = query["query"]
-    print("Query query:",query_query)
     splitted_query = query_query.split("SQLQuery:")
-    print("Splitted query:",splitted_query[-1])
-    return itemgetter(1)(splitted_query[-1])
+    print("The SQL query is: \n", splitted_query[-1])
+    result = execute_query.invoke(splitted_query[-1])
+    print("The SQL execution result is: \n", result)
+    return result
 
 chain = ( 
     RunnablePassthrough.assign(query=write_query).assign(
-        result= split_query | execute_query
+        result= split_query
     )
     | answer 
 )
 
-response = chain.invoke({"question": "How many invoices are there in the database"})
-print(response)
+response1 = chain.invoke({"question": "How many invoices are there in the database"})
+print("The question was: How many invoices are there in the database, the response is: \n ", response1)
+response2 = chain.invoke({"question": "Get me the entry with invoice id 1685022319400"})
+print("The question was: Get me the entry with invoice id 1685022319400, the response is: \n ", response2)
+response3 = chain.invoke({"question": "Get me the id's of invoices where amount spent is over 20000. Do not limit the number of results"})
+print("The question was: Get me the id's of users who have spent over 20000, the response is: \n ", response3)
 

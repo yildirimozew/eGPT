@@ -15,9 +15,9 @@ engine = create_engine("sqlite:///text_to_sql.db")
 #df.to_sql("text_to_sql", engine, index=False)
 db = SQLDatabase(engine=engine)
 
-print(db.dialect)
-print("Usable table names: ", db.get_usable_table_names())
-print(db.run("SELECT * FROM text_to_sql WHERE invoice_id = 1685022319400;"))
+#print(db.dialect)
+#print("Usable table names: ", db.get_usable_table_names())
+#print(db.run("SELECT * FROM text_to_sql WHERE invoice_id = 1685022319400;"))
 
 llm = ChatOllama(
     model="granite-code:3b",
@@ -25,6 +25,7 @@ llm = ChatOllama(
 
 chain = create_sql_query_chain(llm, db)
 response = chain.invoke({"question": "Show me the entry with invoice_id 1685022319400"})
-db.run(response)
-
+print("Response: ", response)
+result = db.run(response)
+print("SQL execution Result: ", result)
 #llama is really bad at generating sql. 
