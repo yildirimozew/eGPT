@@ -35,6 +35,13 @@ from langchain.agents.output_parsers.openai_tools import OpenAIToolsAgentOutputP
 from langchain.agents import AgentExecutor
 from langgraph.prebuilt import create_react_agent
 from langgraph.checkpoint.memory import MemorySaver
+from typing import Annotated
+from typing_extensions import TypedDict
+from langgraph.graph import StateGraph, START, END
+from langgraph.graph.message import add_messages
+import json
+from langchain_core.messages import ToolMessage
+
 
 """what we need our agent to do:
 1- decide on whether to query the database
@@ -65,16 +72,13 @@ llm = ChatOllama(
 )
 
 #this loads a text file
-loader = TextLoader("./data/metu.txt")
-data = loader.load()
-
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
-all_splits = text_splitter.split_documents(data)
-
-local_embeddings = OllamaEmbeddings(model="mxbai-embed-large:latest")
-
-vectorstore = Chroma.from_documents(documents=all_splits, embedding=local_embeddings)
-retriever = vectorstore.as_retriever()
+#loader = TextLoader("./data/metu.txt")
+#data = loader.load()
+#text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
+#all_splits = text_splitter.split_documents(data)
+#local_embeddings = OllamaEmbeddings(model="mxbai-embed-large:latest")
+#vectorstore = Chroma.from_documents(documents=all_splits, embedding=local_embeddings)
+#retriever = vectorstore.as_retriever()
 
 execute_query_tool = QuerySQLDataBaseTool(db=db)
 
@@ -164,6 +168,7 @@ agent = (
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, return_intermediate_steps=True)
 
 #list(agent_executor.stream({"input": "If Ayşe and Mehmet marry, what will be the relationship between Kemal and Mahmut?"}))
+#bunu dene
 
 #TODO add memory
 
@@ -176,11 +181,11 @@ config = {"configurable": {"thread_id": "test-thread"}}
 
 langgraph_agent_executor = create_react_agent(llm_with_tools, tools, state_modifier=system_message, checkpointer=memory)
 
-messages = langgraph_agent_executor.invoke({"messages": [("user", query)]}, config=config)
-{
-    "input": query,
-    "output": messages["messages"][-1].content,
-}
+#messages = langgraph_agent_executor.invoke({"messages": [("user", query)]}, config=config)
+#{
+#    "input": query,
+#    "output": messages["messages"][-1].content,
+#}
 
 RAG_PROMPT = """
 Use the following context to answer the user's query. If you cannot answer the question, please respond with 'I don't know'.
@@ -194,4 +199,95 @@ Context:
 
 rag_prompt = ChatPromptTemplate.from_template(RAG_PROMPT)
 
-print(messages)
+#print(messages)
+#bunu da dene
+
+
+#agent tools and langgraph implementation
+
+@tool
+def need_query_database(user_query: str) -> str:
+    """Decides whether to query the database or not"""
+    prompt = """Given a user query, tables in the database, decide whether to query the database to answer question or not.
+    Question: {input}
+    Tables: {table_info}
+    Answer: Yes/No"""
+    return llm.invoke({"input": user_query, "table_info": db.get_table_info(), "prompt": prompt})
+
+
+@tool
+def need_translation(user_query: str) -> str:
+    """Decides whether to translate the query to English or not"""
+    prompt = """Given a user query, decide whether to translate it or not. If the query is not in English, you should translate it to English.
+    Question: {input}
+    Answer: Yes/No"""
+    return llm.invoke({"input": user_query, "prompt": prompt})
+
+tools = [need_query_database, need_translation, query_database]
+llm_with_tools = llm.bind_tools(tools)
+
+class State(TypedDict):
+    messages: Annotated[list, add_messages]
+
+graph_builder = StateGraph(State)
+
+def chatbot(state: State):
+    return {"messages": [llm.invoke(state["messages"])]}
+
+class BasicToolNode:
+    """A node that runs the tools requested in the last AIMessage."""
+
+    def __init__(self, tools: list) -> None:
+        self.tools_by_name = {tool.name: tool for tool in tools}
+
+    def __call__(self, inputs: dict):
+        if messages := inputs.get("messages", []):
+            message = messages[-1]
+        else:
+            raise ValueError("No message found in input")
+        outputs = []
+        for tool_call in message.tool_calls:
+            tool_result = self.tools_by_name[tool_call["name"]].invoke(
+                tool_call["args"]
+            )
+            outputs.append(
+                ToolMessage(
+                    content=json.dumps(tool_result),
+                    name=tool_call["name"],
+                    tool_call_id=tool_call["id"],
+                )
+            )
+        return {"messages": outputs}
+
+
+tool_node = BasicToolNode(tools=[tool])
+graph_builder.add_node("tools", tool_node)
+
+graph_builder.add_node("chatbot", chatbot)
+
+graph_builder.add_edge(START, "chatbot")
+
+graph_builder.add_edge("chatbot", END)
+
+graph = graph_builder.compile()
+
+def stream_graph_updates(user_input: str):
+    for event in graph.stream({"messages": [("user", user_input)]}):
+        for value in event.values():
+            print("Assistant:", value["messages"][-1].content)
+
+
+while True:
+    try:
+        user_input = input("User: ")
+        if user_input.lower() in ["quit", "exit", "q"]:
+            print("Goodbye!")
+            break
+
+        stream_graph_updates(user_input)
+    except:
+        # fallback if input() is not available
+        user_input = "What do you know about LangGraph?"
+        print("User: " + user_input)
+        stream_graph_updates(user_input)
+        break
