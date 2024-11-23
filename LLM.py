@@ -107,6 +107,9 @@ graph_builder = StateGraph(State)
 def chatbot(state: State):
     answer = llm.invoke(state["messages"])
     return {"messages": answer}
+    
+def empty_node(state: State):
+    return state
 
 #nodes
 graph_builder.add_node("chatbot", chatbot)
